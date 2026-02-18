@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <!-- ===== Meta ===== -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- ===== Primary Meta ===== -->
+   <title>Bakery | Panadería artesanal</title>
+   <meta name="description"
+      content="Panadería artesanal con productos frescos, recetas tradicionales y sabores únicos. Descubre nuestras novedades y favoritos." />
+   <!-- ===== favicon ===== -->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+   <!-- ===== Preconnect for performance ===== -->
+   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+   <!-- ===== Remix Icons ===== -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+   <!-- ===== Main CSS ===== -->
+   <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+   <!-- ==================== HEADER ==================== -->
+   <header class="header" id="header">
+      <nav class="nav container" aria-label="Main navigation">
+
+         <!-- Brand / Logo -->
+         <a href="#" class="nav__logo">Bakery</a>
+
+         <!-- Mobile Menu Toggle -->
+         <button type="button" class="nav__toggle btn-reset" id="nav-toggle" aria-label="Abrir menú"
+            aria-controls="nav-menu" aria-expanded="false">
+            <i class="ri-menu-line" aria-hidden="true"></i>
+         </button>
+
+         <!-- Navigation Menu -->
+         <div class="nav__menu" id="nav-menu">
+
+            <!-- Close Menu Button (Mobile) -->
+            <button type="button" class="nav__close btn-reset" id="nav-close" aria-label="Cerrar menú">
+               <i class="ri-close-line" aria-hidden="true"></i>
+            </button>
+
+            <!-- Primary Navigation Links -->
+            <ul class="nav__list">
+               <li class="nav__item">
+                  <a href="#home" class="nav__link active-link">Inicio</a>
+               </li>
+               <li class="nav__item">
+                  <a href="#new" class="nav__link">Novedades</a>
+               </li>
+               <li class="nav__item">
+                  <a href="#about" class="nav__link">Nuestra Historia</a>
+               </li>
+               <li class="nav__item">
+                  <a href="#favorite" class="nav__link">Favoritos</a>
+               </li>
+               <li class="nav__item">
+                  <a href="#visit" class="nav__link">Visítanos</a>
+               </li>
+            </ul>
+
+            <!-- Decorative Images -->
+            <img src="assets/img/bread-4.png" alt="" loading="lazy" decoding="async" class="nav__img-1">
+            <img src="assets/img/bread-1.png" alt="" loading="lazy" decoding="async" class="nav__img-2">
+         </div>
+      </nav>
+   </header>
+
+   <!-- ==================== MAIN ==================== -->
+   <main class="main">
+      <!-- HOME -->
+      <section class="home section" id="home" aria-labelledby="home-title">
+         <img src="assets/img/home-bg.jpg" alt="" class="home__bg" aria-hidden="true" loading="eager">
+         <div class="home__shadow" aria-hidden="true"></div>
+
+         <div class="home__container container grid">
+
+            <!-- Hero Content -->
+            <header class="home__data">
+               <h1 class="home__title">Pan Artesanal <br> Aroma que te enamora</h1>
+
+               <a href="#products" class="home__btn button">
+                  Descubrir Panes
+               </a>
+
+               <!-- Decorative floating bread -->
+               <img src="assets/img/bread-1.png" alt="" class="home__bread" aria-hidden="true" loading="lazy">
+            </header>
+
+            <!-- Main Hero Image -->
+            <figure class="home__image">
+               <img src="assets/img/home-bread.png" alt="Pan artesanal sobre una tabla de madera" class="home__img"
+                  loading="lazy">
+               <figcaption class="visually-hidden">
+                  Imagen representativa de nuestros panes artesanales.
+               </figcaption>
+            </figure>
+
+            <!-- Contact & Social Footer -->
+            <footer class="home__footer">
+               <address class="home__location">
+                  <i class="ri-map-pin-line" aria-hidden="true"></i>
+                  <span>AV. El Sol #321<br>La Estrella, Colombia.</span>
+               </address>
+
+               <nav class="home__social" aria-label="Redes sociales">
+                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                     class="home__social-link" aria-label="Visítanos en Instagram">
+                     <i class="ri-instagram-fill" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                     class="home__social-link" aria-label="Visítanos en Facebook">
+                     <i class="ri-facebook-circle-fill" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="home__social-link"
+                     aria-label="Visítanos en YouTube">
+                     <i class="ri-youtube-fill" aria-hidden="true"></i>
+                  </a>
+               </nav>
+            </footer>
+         </div>
+      </section>
+
+      <!-- NEWS -->
+      <section class="new section" id="new" aria-labelledby="new-section-title">
+
+         <h2 class="section__title" id="new-section-title">Nuestras Nuevas Especialidades</h2>
+
+         <div class="new__container container grid">
+            <div class="new__content grid">
+               <article class="new__card" itemscope itemtype="https://schema.org/Product">
+                  <div class="new__data">
+                     <h3 class="new__title" itemprop="name">Pan de Centeno Artesanal</h2>
+                        <p class="new__description" itemprop="description">Elaborado con masa madre natural, rico en
+                           fibra y con un sabor profundo
+                           y auténtico.</p>
+                  </div>
+
+                  <img src="assets/img/new-bread-1.png" alt="Pan de Centeno Artesanal" class="new__img" loading="lazy"
+                     itemprop="image">
+               </article>
+
+               <article class="new__card" itemscope itemtype="https://schema.org/Product">
+                  <div class="new__data">
+                     <h3 class="new__title" itemprop="name">Pan Integral Premium</h3>
+                     <p class="new__description" itemprop="description">Crujiente por fuera, suave por dentro, preparado
+                        con harina orgánica 100% natural.</p>
+                  </div>
+
+                  <img src="assets/img/new-bread-2.png" alt="Pan Integral Premium" class="new__img" loading="lazy"
+                     itemprop="image">
+               </article>
+
+               <article class="new__card" itemscope itemtype="https://schema.org/Product">
+                  <div class="new__data">
+                     <h3 class="new__title" itemprop="name">Pan Multigrano Campesino</h3>
+                     <p class="new__description" itemprop="description">Una mezcla equilibrada de granos seleccionados
+                        que aportan textura, nutrición y un sabor único.</p>
+                  </div>
+
+                  <img src="assets/img/new-bread-3.png" alt="Pan Multigrano Campesino" class="new__img" loading="lazy"
+                     itemprop="image">
+               </article>
+            </div>
+
+            <a href="/productos" class="new__button button" aria-label="Explorar más panes artesanales">Explorar Más</a>
+         </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about section" id="about" aria-labelledby="about-title">
+         <div class="about__container container grid">
+
+            <div class="about__data">
+               <h2 class="section__title" id="about-title">Nuestra Historia</h2>
+
+               <p class="about__description">Somos una panadería artesanal apasionada por la tradición y la calidad.
+                  Cada uno de nuestros panes es elaborado a mano con ingredientes frescos,
+                  locales y cuidadosamente seleccionados.
+                  Combinamos técnicas tradicionales con un toque moderno para ofrecer
+                  una experiencia única en cada bocado.
+                  También contamos con una selección especial de café y productos recién preparados.</p>
+
+               <a href="/historia" class="button"
+                  aria-label="Conocer más sobre nuestra historia y tradición artesanal">Conocer Más</a>
+
+               <img src="assets/img/bread-2.png" alt="" class="about__bread" loading="lazy" aria-hidden="true">
+            </div>
+
+            <figure class="about__figure">
+               <img src="assets/img/about-bread.png" alt="Pan artesanal recién horneado sobre mesa de madera"
+                  class="about__img" loading="lazy">
+            </figure>
+         </div>
+      </section>
+
+      <!-- FAVORITES -->
+      <section class="favorite section" id="favorite" aria-labelledby="favorite-title">
+         <h2 class="section__title" id="favorite-title">Los Favoritos de Nuestros Clientes</h2>
+
+         <div class="favorite__container container grid">
+            <!-- Product Item -->
+            <article class="favorite__card" itemscope itemtype="https://schema.org/Product">
+               <!-- Product Image -->
+               <img src="assets/img/favorite-bread-1.png" alt="Pan Integral recién horneado" class="favorite__img"
+                  loading="lazy" itemprop="image">
+               <!-- Product Content -->
+               <div class="favorite__data">
+                  <h3 class="favorite__title" itemprop="name">Pan Integral</h3>
+                  <p class="favorite__description" itemprop="description">Clásico Saludable</p>
+                  <meta itemprop="priceCurrency" content="COP">
+                  <span class="favorite__price" itemprop="price">$6.000</span>
+               </div>
+               <!-- Cart Button -->
+               <button class="favorite__button button" aria-label="Agregar Pan Integral al carrito">
+                  <i class="ri-add-line" aria-hidden="true"></i>
+               </button>
+            </article>
+            <!-- Product Item -->
+            <article class="favorite__card" itemscope itemtype="https://schema.org/Product">
+               <!-- Product Image -->
+               <img src="assets/img/favorite-bread-2.png" alt="Pan de centeno artesanal con textura rústica"
+                  class="favorite__img" loading="lazy" itemprop="image">
+               <!-- Product Content -->
+               <div class="favorite__data">
+                  <h3 class="favorite__title" itemprop="name">Pan de Centeno</h3>
+                  <p class="favorite__description" itemprop="description">Sabor Intenso</p>
+                  <meta itemprop="priceCurrency" content="COP">
+                  <span class="favorite__price" itemprop="price">$8.000</span>
+               </div>
+               <!-- Cart Button -->
+               <button class="favorite__button button" aria-label="Agregar Pan de Centeno al carrito">
+                  <i class="ri-add-line" aria-hidden="true"></i>
+               </button>
+            </article>
+            <!-- Product Item -->
+            <article class="favorite__card" itemscope itemtype="https://schema.org/Product">
+               <!-- Product Image -->
+               <img src="assets/img/favorite-bread-3.png" alt="Pan de Trigo tradicional" class="favorite__img"
+                  loading="lazy" itemprop="image">
+               <!-- Product Content -->
+               <div class="favorite__data">
+                  <h3 class="favorite__title" itemprop="name">Pan de Trigo</h3>
+                  <p class="favorite__description" itemprop="description">Tradicional</p>
+                  <meta itemprop="priceCurrency" content="COP">
+                  <span class="favorite__price" itemprop="price">$3.000</span>
+               </div>
+               <!-- Cart Button -->
+               <button class="favorite__button button" aria-label="Agregar Pan de Trigo tradicional al carrito">
+                  <i class="ri-add-line" aria-hidden="true"></i>
+               </button>
+            </article>
+            <!-- Product Item -->
+            <article class="favorite__card" itemscope itemtype="https://schema.org/Product">
+               <!-- Product Image -->
+               <img src="assets/img/favorite-bread-4.png" alt="Pan Multigrano trigo, avena, linaza, chía y centeno"
+                  class="favorite__img" loading="lazy" itemprop="image">
+               <!-- Product Content -->
+               <div class="favorite__data">
+                  <h3 class="favorite__title" itemprop="name">Pan Multigrano</h3>
+                  <p class="favorite__description" itemprop="description">Energía Natural</p>
+                  <meta itemprop="priceCurrency" content="COP">
+                  <span class="favorite__price" itemprop="price">$5.000</span>
+               </div>
+               <!-- Cart Button -->
+               <button class="favorite__button button"
+                  aria-label="Agregar Multigrano trigo, avena, linaza, chía y centeno al carrito">
+                  <i class="ri-add-line" aria-hidden="true"></i>
+               </button>
+            </article>
+            <!-- Product Item -->
+            <article class="favorite__card" itemscope itemtype="https://schema.org/Product">
+               <!-- Product Image -->
+               <img src="assets/img/favorite-bread-5.png" alt="Pan de masa madre artesanal con corteza crujiente"
+                  class="favorite__img" loading="lazy" itemprop="image">
+               <!-- Product Content -->
+               <div class="favorite__data">
+                  <h3 class="favorite__title" itemprop="name">Pan de Masa Madre</h3>
+                  <p class="favorite__description" itemprop="description">Fermentación Natural</p>
+                  <meta itemprop="priceCurrency" content="COP">
+                  <span class="favorite__price" itemprop="price">$7.000</span>
+               </div>
+               <!-- Cart Button -->
+               <button class="favorite__button button" aria-label="Agregar Pan de masa madre artesanal al carrito">
+                  <i class="ri-add-line" aria-hidden="true"></i>
+               </button>
+            </article>
+            <!-- Product Item -->
+            <article class="favorite__card" itemscope itemtype="https://schema.org/Product">
+               <!-- Product Image -->
+               <img src="assets/img/favorite-bread-6.png" alt="Pan Francés" class="favorite__img" loading="lazy"
+                  itemprop="image">
+               <!-- Product Content -->
+               <div class="favorite__data">
+                  <h3 class="favorite__title" itemprop="name">Pan Francés</h3>
+                  <p class="favorite__description" itemprop="description">Crujiente Clásico</p>
+                  <meta itemprop="priceCurrency" content="COP">
+                  <span class="favorite__price" itemprop="price">$4.000</span>
+               </div>
+               <!-- Cart Button -->
+               <button class="favorite__button button" aria-label="Agregar Pan Francés al carrito">
+                  <i class="ri-add-line" aria-hidden="true"></i>
+               </button>
+            </article>
+         </div>
+      </section>
+
+      <!-- VISIT -->
+      <section class="visit section" id="visit" aria-labelledby="visit-title" itemscope
+         itemtype="https://schema.org/Bakery">
+         <div class="visit__container">
+            <div class="visit__content container grid">
+               <div class="visit__data">
+                  <h2 class="section__title" id="visit-title" itemprop="name">Ven y Vive la Experiencia</h2>
+
+                  <p class="visit__description" itemprop="description">Disfruta del aroma del pan recién horneado y
+                     descubre por qué somos la panadería favorita del barrio. Te esperamos con los brazos abiertos.</p>
+
+                  <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" class="button"
+                     aria-label="Abrir ubicación en Google Maps">Cómo Llegar</a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- ==================== FOOTER ==================== -->
+   <footer class="footer" role="contentinfo" itemscope itemtype="https://schema.org/Bakery">
+      <div class="footer__container container grid">
+         <div class="footer__brand">
+            <a href="/" class="footer__logo" itemprop="name">Bakery</a>
+            <p class="footer__description" itemprop="description">Tradición, sabor y calidad <br> en cada pan.</p>
+         </div>
+
+         <div class="footer__content grid">
+            <section class="footer__section">
+               <h2 class="footer__title">Dirección</h2>
+               <address class="footer__address" itemprop="address" itemscope
+                  itemtype="https://schema.org/PostalAddress">
+                  <span itemprop="streetAddress">
+                     Calle 123 #45-67
+                  </span>
+                  <span itemprop="addressLocality">
+                     La Estrella
+                  </span>,
+                  <span itemprop="addressRegion">
+                     Antioquia
+                  </span>,
+                  <span itemprop="addressCountry">
+                     Colombia
+                  </span>
+               </address>
+
+               <p class="footer__hours">
+                  <strong>Horario:</strong>
+                  <time datetime="09:00">9:00 AM</time> -
+                  <time datetime="23:00">11:00 PM</time>
+               </p>
+            </section>
+
+            <section class="footer__section">
+               <h2 class="footer__title">Síguenos</h2>
+
+               <ul class="footer__social" role="list">
+
+                  <li>
+                     <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visítanos en Instagram" itemprop="sameAs">
+                        <i class="ri-instagram-fill" aria-hidden="true"></i>
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visítanos en Facebook" itemprop="sameAs">
+                        <i class="ri-facebook-circle-fill" aria-hidden="true"></i>
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visítanos en YouTube" itemprop="sameAs">
+                        <i class="ri-youtube-fill" aria-hidden="true"></i>
+                     </a>
+                  </li>
+
+               </ul>
+            </section>
+
+            <section class="footer__section">
+               <h2 class="footer__title">Contacto</h2>
+
+               <ul class="footer__contact">
+                  <li>
+                     <a href="mailto:bakery@email.com" itemprop="email">
+                        bakery@email.com
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="tel:+573001234567" itemprop="telephone">
+                        +57 300 123 4567
+                     </a>
+                  </li>
+               </ul>
+            </section>
+         </div>
+
+         <img src="assets/img/bread-4.png" alt="" loading="lazy" decoding="async" class="footer__img-1">
+         <img src="assets/img/bread-3.png" alt="" loading="lazy" decoding="async" class="footer__img-2">
+      </div>
+
+      <div class="footer__copy">
+
+         <p>&copy; <span id="year"></span> JYepesDev. All rights reserved.</p>
+
+         <p>
+            Conceptual design by
+            <a href="https://www.youtube.com/c/Bedimcode" target="_blank" rel="noopener noreferrer">
+               Bedimcode
+            </a>
+         </p>
+
+         <p>
+            <a href="https://github.com/jcyepesdev/landing-bakery-website.git" target="_blank" rel="noopener noreferrer"
+               aria-label="Ver código fuente en GitHub">
+               <i class="ri-github-fill"></i> Source code
+            </a>
+         </p>
+      </div>
+   </footer>
+
+   <!-- ==================== SCROLL UP ==================== -->
+   <!-- ==================== SCROLLREVEAL ==================== -->
+   <!-- ==================== MAIN JS ==================== -->
+   <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>
