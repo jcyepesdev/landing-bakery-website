@@ -18,7 +18,7 @@ The project includes:
 
 ## 🚀 Live Demo
 
-[View Project](#)  
+[View Project](https://landing-bakery-website.netlify.app/)  
 
 ---
 
