@@ -1,5 +1,16 @@
 'use strict';
 /* =========================================================
+    DOM elements
+============================================================ */
+const navMenu = document.getElementById('nav-menu');
+const navToggle = document.getElementById('nav-toggle');
+const navClose = document.getElementById('nav-close');
+const navLinks = document.querySelectorAll('.nav__link');
+const header = document.getElementById('header');
+const scrollUp = document.getElementById('scroll-up');
+const sections = document.querySelectorAll('section[id]');
+
+/* =========================================================
     Mobile Navigation Module
     Handles:
     - Open / Close mobile menu
@@ -8,12 +19,6 @@
     - Close on outside click
     - Close on navigation link click
 ============================================================ */
-// DOM elements
-const navMenu = document.getElementById('nav-menu');
-const navToggle = document.getElementById('nav-toggle');
-const navClose = document.getElementById('nav-close');
-const navLinks = document.querySelectorAll('.nav__link');
-
 // Guard clause – prevent execution if required elements are missing
 if (navMenu && navToggle && navClose) {
     // Constants
@@ -70,6 +75,21 @@ if (navMenu && navToggle && navClose) {
     });
 };
 
+/* =========================================================
+ * Map section IDs to their corresponding navigation links.
+ * This avoids querying the DOM on every scroll event
+ * and gives us O(1) access when determining the active link.
+============================================================ */
+const navLinkMap = {};
+
+navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    // Only process internal anchor links (e.g. #about, #services)
+    // Optional chaining prevents runtime errors if href is null
+    if (href?.startsWith('#')) {
+        navLinkMap[href.replace('#', '')] = link;
+    }
+});
 
 /* =========================================================
     Handles all scroll-related UI updates:
@@ -77,20 +97,52 @@ if (navMenu && navToggle && navClose) {
     - Scroll-up button visibility
     - Active navigation link highlighting
 ============================================================ */
-// DOM elements
-const header = document.getElementById('header');
-const copyYear = document.getElementById('year');
-
 const handleScroll = () => {
+    // Cache header height once per scroll execution
     const scrollY = window.scrollY;
+    // Used to offset active section detection
+    const headerHeight = header?.offsetHeight || 0;
 
-    // 1. Header Blur Effect
+    /**
+    * UI state: Header blur effect after scrolling past threshold
+    */
     if (header) {
-        scrollY >= 50 ? header.classList.add('blur-header') : header.classList.remove('blur-header');
+        header.classList.toggle('blur-header', scrollY >= 50);
     }
-}
+    /**
+     * UI state: Show scroll-to-top button
+     */
+    if (scrollUp) {
+        scrollUp.classList.toggle('show-scroll', scrollY >= 50);
+    }
+
+    /**
+    * Determine which section is currently in view
+    * and activate corresponding nav link
+    */
+    sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        // Adjust top offset by header height to account for fixed header
+        const sectionTop = section.offsetTop - headerHeight;
+        const sectionId = section.id;
+
+        const navLink = navLinkMap[sectionId];
+
+        // Skip if section has no corresponding nav link
+        if (!navLink) return;
+
+        const isActive =
+            scrollY > sectionTop &&
+            scrollY <= sectionTop + sectionHeight;
+
+        navLink.classList.toggle('active-link', isActive);
+    });
+};
 /* Attach a single scroll listener for performance */
 window.addEventListener('scroll', handleScroll, { passive: true });
 
-// Dynamic Year
+/* =========================================================
+    Handle Dynamic Year
+============================================================ */
+const copyYear = document.getElementById('year');
 if (copyYear) copyYear.textContent = new Date().getFullYear();

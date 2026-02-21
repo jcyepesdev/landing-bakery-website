@@ -71,9 +71,6 @@
    <main class="main">
       <!-- HOME -->
       <section class="home section" id="home" aria-labelledby="home-title">
-         <img src="assets/img/home-bg.jpg" alt="" class="home__bg" aria-hidden="true" loading="eager">
-         <div class="home__shadow" aria-hidden="true"></div>
-
          <div class="home__container container grid">
 
             <!-- Hero Content -->
@@ -101,7 +98,7 @@
             <footer class="home__footer">
                <address class="home__location">
                   <i class="ri-map-pin-line" aria-hidden="true"></i>
-                  <span>AV. El Sol #321<br>La Estrella, Colombia.</span>
+                  <p>Calle 123 #45-67 La Estrella, <br> Antioquia.</p>
                </address>
 
                <nav class="home__social" aria-label="Redes sociales">
@@ -125,7 +122,7 @@
       <!-- NEWS -->
       <section class="new section" id="new" aria-labelledby="new-section-title">
 
-         <h2 class="section__title" id="new-section-title">Nuestras Nuevas Especialidades</h2>
+         <h2 class="section__title container" id="new-section-title">Nuestras Nuevas <br> Especialidades</h2>
 
          <div class="new__container container grid">
             <div class="new__content grid">
@@ -173,7 +170,7 @@
          <div class="about__container container grid">
 
             <div class="about__data">
-               <h2 class="section__title" id="about-title">Nuestra Historia</h2>
+               <h2 class="about__title section__title" id="about-title">Nuestra Historia</h2>
 
                <p class="about__description">Somos una panadería artesanal apasionada por la tradición y la calidad.
                   Cada uno de nuestros panes es elaborado a mano con ingredientes frescos,
@@ -196,8 +193,8 @@
       </section>
 
       <!-- FAVORITES -->
-      <section class="favorite section" id="favorite" aria-labelledby="favorite-title">
-         <h2 class="section__title" id="favorite-title">Los Favoritos de Nuestros Clientes</h2>
+      <section class="favorite section" id="favorite" aria-labelledby="favorite__title favorite-title">
+         <h2 class="favorite__title section__title" id="favorite-title">Los Favoritos de <br> Nuestros Clientes</h2>
 
          <div class="favorite__container container grid">
             <!-- Product Item -->
@@ -207,7 +204,7 @@
                   loading="lazy" itemprop="image">
                <!-- Product Content -->
                <div class="favorite__data">
-                  <h3 class="favorite__title" itemprop="name">Pan Integral</h3>
+                  <h3 class="favorite-card__title" itemprop="name">Pan Integral</h3>
                   <p class="favorite__description" itemprop="description">Clásico Saludable</p>
                   <meta itemprop="priceCurrency" content="COP">
                   <span class="favorite__price" itemprop="price">$6.000</span>
@@ -224,7 +221,7 @@
                   class="favorite__img" loading="lazy" itemprop="image">
                <!-- Product Content -->
                <div class="favorite__data">
-                  <h3 class="favorite__title" itemprop="name">Pan de Centeno</h3>
+                  <h3 class="favorite-card__title" itemprop="name">Pan de Centeno</h3>
                   <p class="favorite__description" itemprop="description">Sabor Intenso</p>
                   <meta itemprop="priceCurrency" content="COP">
                   <span class="favorite__price" itemprop="price">$8.000</span>
@@ -241,7 +238,7 @@
                   loading="lazy" itemprop="image">
                <!-- Product Content -->
                <div class="favorite__data">
-                  <h3 class="favorite__title" itemprop="name">Pan de Trigo</h3>
+                  <h3 class="favorite-card__title" itemprop="name">Pan de Trigo</h3>
                   <p class="favorite__description" itemprop="description">Tradicional</p>
                   <meta itemprop="priceCurrency" content="COP">
                   <span class="favorite__price" itemprop="price">$3.000</span>
@@ -258,7 +255,7 @@
                   class="favorite__img" loading="lazy" itemprop="image">
                <!-- Product Content -->
                <div class="favorite__data">
-                  <h3 class="favorite__title" itemprop="name">Pan Multigrano</h3>
+                  <h3 class="favorite-card__title" itemprop="name">Pan Multigrano</h3>
                   <p class="favorite__description" itemprop="description">Energía Natural</p>
                   <meta itemprop="priceCurrency" content="COP">
                   <span class="favorite__price" itemprop="price">$5.000</span>
@@ -276,7 +273,7 @@
                   class="favorite__img" loading="lazy" itemprop="image">
                <!-- Product Content -->
                <div class="favorite__data">
-                  <h3 class="favorite__title" itemprop="name">Pan de Masa Madre</h3>
+                  <h3 class="favorite-card__title" itemprop="name">Pan de Masa Madre</h3>
                   <p class="favorite__description" itemprop="description">Fermentación Natural</p>
                   <meta itemprop="priceCurrency" content="COP">
                   <span class="favorite__price" itemprop="price">$7.000</span>
@@ -293,7 +290,7 @@
                   itemprop="image">
                <!-- Product Content -->
                <div class="favorite__data">
-                  <h3 class="favorite__title" itemprop="name">Pan Francés</h3>
+                  <h3 class="favorite-card__title" itemprop="name">Pan Francés</h3>
                   <p class="favorite__description" itemprop="description">Crujiente Clásico</p>
                   <meta itemprop="priceCurrency" content="COP">
                   <span class="favorite__price" itemprop="price">$4.000</span>
@@ -307,20 +304,16 @@
       </section>
 
       <!-- VISIT -->
-      <section class="visit section" id="visit" aria-labelledby="visit-title" itemscope
+      <section class="visit section grid" id="visit" aria-labelledby="visit-title" itemscope
          itemtype="https://schema.org/Bakery">
-         <div class="visit__container">
-            <div class="visit__content container grid">
-               <div class="visit__data">
-                  <h2 class="section__title" id="visit-title" itemprop="name">Ven y Vive la Experiencia</h2>
+         <div class="visit__container container">
+            <h2 class="section__title" id="visit-title" itemprop="name">Ven y Vive la Experiencia</h2>
 
-                  <p class="visit__description" itemprop="description">Disfruta del aroma del pan recién horneado y
-                     descubre por qué somos la panadería favorita del barrio. Te esperamos con los brazos abiertos.</p>
+            <p class="visit__description" itemprop="description">Disfruta del aroma del pan recién horneado y
+               descubre por qué somos la panadería favorita del barrio. Te esperamos con los brazos abiertos.</p>
 
-                  <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" class="button"
-                     aria-label="Abrir ubicación en Google Maps">Cómo Llegar</a>
-               </div>
-            </div>
+            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" class="visit__button button"
+               aria-label="Abrir ubicación en Google Maps">Cómo Llegar</a>
          </div>
       </section>
    </main>
@@ -432,6 +425,10 @@
    </footer>
 
    <!-- ==================== SCROLL UP ==================== -->
+   <a href="#" class="scrollup" id="scroll-up" aria-label="Scroll to top">
+      <i class="ri-arrow-up-line" aria-hidden="true"></i>
+   </a>
+
    <!-- ==================== SCROLLREVEAL ==================== -->
    <!-- ==================== MAIN JS ==================== -->
    <script src="assets/js/main.js" defer></script>

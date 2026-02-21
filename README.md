@@ -69,7 +69,7 @@ The base design and concept were inspired by the YouTube tutorial:
 
 Responsive Bakery Website Design Using HTML CSS And JavaScript 
 By Bedimcode  
-https://www.youtube.com/watch?v=TTOkgUNmNk0&t=1533s
+https://youtu.be/TTOkgUNmNk0?si=UZoIEqhbF0cKePmv
 
 All rights to the original design concept belong to the creator.
 
